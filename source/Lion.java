@@ -5,6 +5,11 @@ public class Lion extends Animal implements Mammal {
 	private String name;
 	private boolean hasPartner;
 	
+	public Lion() {
+		super(1.0, 1.0, (byte)4, "antilopes");
+		this.setName("Anonymous");
+	}
+	
 	public Lion(String name, double weightInKilos, double lengthInMeters, byte legs, String favoriteFood) {
 		super(weightInKilos, lengthInMeters, legs, favoriteFood);
 		this.setName(name);

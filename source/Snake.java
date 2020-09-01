@@ -5,6 +5,11 @@ public class Snake extends Animal implements Reptile {
 	private boolean hasHole;
 	private String colour;
 	
+	public Snake() {
+		super(5.0, 2.0, (byte)0, "mice");
+		this.setHasHole(true);
+	}
+
 	public Snake(boolean hasHole, double weightInKilos, double lengthInMeters, byte legs, String favoriteFood) {
 		super(weightInKilos, lengthInMeters, legs, favoriteFood);
 		this.setHasHole(hasHole);
