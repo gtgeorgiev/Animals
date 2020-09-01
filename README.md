@@ -1,2 +1,2 @@
 # Animals
-<img src="structure.jpg" width="300"/>
+<img src="structure.jpg" width="700"/>
