@@ -4,10 +4,10 @@ public abstract class Animal {
 	
 	private double weightInKilos;
 	private double lengthInMeters;
-	private int legs;
+	private byte legs;
 	private String favoriteFood;
 	
-	public Animal(double weightInKilos, double lengthInMeters, int legs, String favoriteFood) {
+	public Animal(double weightInKilos, double lengthInMeters, byte legs, String favoriteFood) {
 		this.setWeightInKilos(weightInKilos);
 		this.setLengthInMeters(lengthInMeters);
 		this.setLegs(legs);
@@ -57,24 +57,37 @@ public abstract class Animal {
 		return weightInKilos;
 	}
 
-	public void setWeightInKilos(double weightInKilos) {
-		this.weightInKilos = weightInKilos;
+	public void setWeightInKilos(double weightInKilos) throws IllegalArgumentException {
+		if (weightInKilos > 0) {
+			this.weightInKilos = weightInKilos;
+		} else {
+			throw new IllegalArgumentException("Incorrect value: " + weightInKilos);
+		}
 	}
 
 	public double getLengthInMeters() {
 		return lengthInMeters;
 	}
 
-	public void setLengthInMeters(double lengthInMeters) {
-		this.lengthInMeters = lengthInMeters;
+	public void setLengthInMeters(double lengthInMeters) throws IllegalArgumentException {
+		if (lengthInMeters > 0) {
+			this.lengthInMeters = lengthInMeters;
+		} else {
+			throw new IllegalArgumentException("Incorrect value: " + legs);
+		}
 	}
 
-	public int getLegs() {
+	public byte getLegs() {
 		return legs;
 	}
 
-	public void setLegs(int legs) {
-		this.legs = legs;
+	public void setLegs(byte legs) throws IllegalArgumentException {
+		if (legs >= 0) {
+			this.legs = legs;
+		} else {
+			throw new IllegalArgumentException("Incorrect value: " + legs);
+		}
+		
 	}
 
 	public String getFavoriteFood() {

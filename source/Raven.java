@@ -3,7 +3,7 @@ public class Raven extends Animal implements Bird{
 
 	private boolean hasEggs;
 	
-	public Raven(double weightInKilos, double lengthInMeters, int legs, String favoriteFood) {
+	public Raven(double weightInKilos, double lengthInMeters, byte legs, String favoriteFood) {
 		super(weightInKilos, lengthInMeters, legs, favoriteFood);
 	}
 

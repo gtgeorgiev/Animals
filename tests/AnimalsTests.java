@@ -17,13 +17,13 @@ class AnimalsTests {
 	
 	@BeforeAll
 	static void beforeAll() {
-		babyLion = new Lion("Benjamin", 10, 0.4, 4, "milk")
+		babyLion = new Lion("Benjamin", 10.0, 0.4, (byte)4, "milk")
 				.hasPartner(false);
 		
-		babySnake = new Snake(true, 0.2, 0.2, 0, "insects")
+		babySnake = new Snake(true, 0.2, 0.2, (byte)0, "insects")
 				.withColour("green");
 		
-		babyRaven = new Raven(0.1, 0.1, 2, "worms")
+		babyRaven = new Raven(0.1, 0.1, (byte)2, "worms")
 				.hasEggs(false);
 	}
 	
@@ -34,7 +34,7 @@ class AnimalsTests {
 
 	@Test
 	public void testEqualsAnimals() {
-		Animal babyLionCopy = new Lion("Benjamin", 10, 0.4, 4, "milk");
+		Animal babyLionCopy = new Lion("Benjamin", 10.0, 0.4, (byte)4, "milk");
 		assertEquals(babyLion, babyLionCopy);
 	}
 	

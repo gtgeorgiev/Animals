@@ -5,7 +5,7 @@ public class Lion extends Animal implements Mammal {
 	private String name;
 	private boolean hasPartner;
 	
-	public Lion(String name, double weightInKilos, double lengthInMeters, int legs, String favoriteFood) {
+	public Lion(String name, double weightInKilos, double lengthInMeters, byte legs, String favoriteFood) {
 		super(weightInKilos, lengthInMeters, legs, favoriteFood);
 		this.setName(name);
 	}
